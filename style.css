@@ -1,0 +1,100 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Body Styling */
+body {
+    background-color: #000; /* black background */
+    color: #fff; /* white text */
+    text-align: center;
+    min-height: 100vh;
+}
+
+/* Hero Section */
+.hero {
+    padding: 60px 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #00f0ff; /* neon blue text */
+    text-shadow: 0 0 10px #00f0ff, 0 0 20px #ff0055; /* glowing effect */
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-bottom: 40px;
+}
+
+/* Buttons */
+.button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(45deg, #00f0ff, #ff0055);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #00f0ff, 0 0 40px #ff0055;
+}
+
+/* Quiz Cards */
+.card {
+    background-color: #111;
+    border: 1px solid #222;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 300px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    border-color: #00f0ff;
+    box-shadow: 0 0 20px #00f0ff;
+}
+
+/* Questions */
+.question {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Options */
+.option {
+    display: block;
+    background-color: #222;
+    color: #fff;
+    padding: 10px 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.option:hover {
+    background-color: #00f0ff;
+    color: #000;
+}
+
+/* Footer */
+footer {
+    margin-top: 50px;
+    font-size: 0.9rem;
+    color: #555;
+}
