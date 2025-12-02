@@ -1,112 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GoatedQuiz - Play</title>
-
-    <style>
-        body {
-            background: black;
-            color: white;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .question-box {
-            margin: 40px auto;
-            background: #111;
-            padding: 20px;
-            border-radius: 15px;
-            width: 90%;
-            max-width: 500px;
-            box-shadow: 0 0 20px #00ffff55;
-        }
-
-        button {
-            display: block;
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            background: #222;
-            color: white;
-            border: 2px solid cyan;
-            border-radius: 10px;
-            cursor: pointer;
-            font-size: 18px;
-        }
-
-        button:hover {
-            background: cyan;
-            color: black;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GoatedQuiz - Play</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
-    <h1>GoatedQuiz</h1>
-    <h2>Quiz Page</h2>
+  <div id="level-screen" class="screen">
+    <h2>Select Level</h2>
+    <button class="btn" onclick="startGame('easy')">Easy</button>
+    <button class="btn" onclick="startGame('medium')">Medium</button>
+    <button class="btn" onclick="startGame('hard')">Hard</button>
+  </div>
 
-    <div class="question-box">
-        <h3 id="question">Loading question...</h3>
+  <div id="quiz-screen" class="screen hidden">
+    <h2 id="question"></h2>
+    <div id="options"></div>
 
-        <button onclick="checkAnswer(0)" id="opt1"></button>
-        <button onclick="checkAnswer(1)" id="opt2"></button>
-        <button onclick="checkAnswer(2)" id="opt3"></button>
-        <button onclick="checkAnswer(3)" id="opt4"></button>
-    </div>
+    <h3 id="timer">Time: 15</h3>
+  </div>
 
-    <h3 id="result"></h3>
+  <div id="result-screen" class="screen hidden">
+    <h2>Your Score: <span id="score"></span></h2>
+    <button onclick="location.href='index.html'" class="btn">Back Home</button>
+  </div>
 
-    <script>
-        // Questions
-        const questions = [
-            {
-                q: "Which animal is known as the King of the Jungle?",
-                options: ["Elephant", "Lion", "Tiger", "Cheetah"],
-                answer: 1
-            },
-            {
-                q: "What is the largest planet in our Solar System?",
-                options: ["Earth", "Venus", "Jupiter", "Mars"],
-                answer: 2
-            }
-        ];
-
-        let index = 0;
-
-        function loadQuestion() {
-            document.getElementById("question").innerHTML = questions[index].q;
-
-            for (let i = 0; i < 4; i++) {
-                document.getElementById("opt" + (i + 1)).innerHTML = questions[index].options[i];
-            }
-        }
-
-        function checkAnswer(selected) {
-            if (selected === questions[index].answer) {
-                document.getElementById("result").innerHTML = "Correct! ✔️";
-                document.getElementById("result").style.color = "lightgreen";
-            } else {
-                document.getElementById("result").innerHTML = "Wrong ❌";
-                document.getElementById("result").style.color = "red";
-            }
-
-            setTimeout(() => {
-                index++;
-                if (index < questions.length) {
-                    document.getElementById("result").innerHTML = "";
-                    loadQuestion();
-                } else {
-                    document.getElementById("result").innerHTML = "Quiz Completed!";
-                }
-            }, 1000);
-        }
-
-        loadQuestion();
-    </script>
-
+  <script src="script.js"></script>
 </body>
 </html>
+
