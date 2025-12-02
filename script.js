@@ -1,75 +1,88 @@
-// Quiz Data
-const quizData = [
-    {
-        question: "What is the capital of India?",
-        options: ["Mumbai", "Delhi", "Kolkata", "Chennai"],
-        answer: "Delhi"
-    },
-    {
-        question: "Which is the fastest land animal?",
-        options: ["Cheetah", "Lion", "Tiger", "Horse"],
-        answer: "Cheetah"
-    },
-    {
-        question: "What is 5 + 7?",
-        options: ["10", "12", "11", "13"],
-        answer: "12"
-    }
-];
-
-// DOM Elements
-const questionEl = document.querySelector(".question");
-const optionEls = document.querySelectorAll(".option");
-const nextBtn = document.querySelector("#next-btn");
-const resultEl = document.querySelector("#result");
-
+let questions = [];
 let currentQuestion = 0;
 let score = 0;
+let timer;
+let timeLeft = 15;
+let correctSound = new Audio("correct.mp3");
+let wrongSound = new Audio("wrong.mp3");
 
-// Load Question
+// Load questions from JSON
+async function startGame(level) {
+    document.getElementById("level-screen").classList.add("hidden");
+    document.getElementById("quiz-screen").classList.remove("hidden");
+
+    let res = await fetch("questions.json");
+    let data = await res.json();
+
+    questions = data[level];  // load selected level questions
+    currentQuestion = 0;
+    score = 0;
+
+    loadQuestion();
+    startTimer();
+}
+
 function loadQuestion() {
-    const currentQuiz = quizData[currentQuestion];
-    questionEl.textContent = currentQuiz.question;
-    optionEls.forEach((optionEl, index) => {
-        optionEl.textContent = currentQuiz.options[index];
-        optionEl.style.backgroundColor = "#222"; // reset color
-        optionEl.disabled = false; // enable buttons
+    let q = questions[currentQuestion];
+
+    document.getElementById("question").innerText = q.question;
+
+    let optionsHTML = "";
+    q.options.forEach((opt, index) => {
+        optionsHTML += `<button class="option btn" onclick="checkAnswer(${index})">${opt}</button>`;
     });
-    resultEl.textContent = "";
+
+    document.getElementById("options").innerHTML = optionsHTML;
 }
 
-// Check Answer
-optionEls.forEach(optionEl => {
-    optionEl.addEventListener("click", () => {
-        const selected = optionEl.textContent;
-        if (selected === quizData[currentQuestion].answer) {
-            optionEl.style.backgroundColor = "#00f0ff"; // correct
-            score++;
-        } else {
-            optionEl.style.backgroundColor = "#ff0055"; // wrong
-        }
-        // Disable all options after selection
-        optionEls.forEach(opt => opt.disabled = true);
-    });
-});
+function checkAnswer(selected) {
+    let correct = questions[currentQuestion].answer;
 
-// Next Question
-nextBtn.addEventListener("click", () => {
-    currentQuestion++;
-    if (currentQuestion < quizData.length) {
-        loadQuestion();
+    if (selected === correct) {
+        score++;
+        correctSound.play();
     } else {
-        showResult();
+        wrongSound.play();
     }
-});
 
-// Show Result
-function showResult() {
-    questionEl.style.display = "none";
-    optionEls.forEach(opt => opt.style.display = "none");
-    nextBtn.style.display = "none";
-    resultEl.textContent = `Your Score: ${score} / ${quizData.length}`;
+    currentQuestion++;
+
+    if (currentQuestion < questions.length) {
+        loadQuestion();
+        resetTimer();
+    } else {
+        endQuiz();
+    }
 }
 
-// Initialize Quiz
-loadQuestion();
+function startTimer() {
+    timeLeft = 15;
+    timer = setInterval(() => {
+        timeLeft--;
+        document.getElementById("timer").innerText = "Time: " + timeLeft;
+
+        if (timeLeft <= 0) {
+            currentQuestion++;
+            if (currentQuestion < questions.length) {
+                loadQuestion();
+                resetTimer();
+            } else {
+                endQuiz();
+            }
+        }
+
+    }, 1000);
+}
+
+function resetTimer() {
+    clearInterval(timer);
+    startTimer();
+}
+
+function endQuiz() {
+    clearInterval(timer);
+    document.getElementById("quiz-screen").classList.add("hidden");
+    document.getElementById("result-screen").classList.remove("hidden");
+    document.getElementById("score").innerText = score;
+}
+
