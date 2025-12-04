@@ -34,7 +34,6 @@ function loadQuestion() {
 
     document.getElementById("options").innerHTML = optionsHTML;
 }
-
 function checkAnswer(selected) {
     let correct = questions[currentQuestion].answer;
 
@@ -54,6 +53,7 @@ function checkAnswer(selected) {
         endQuiz();
     }
 }
+
 
 function startTimer() {
     timeLeft = 15;
