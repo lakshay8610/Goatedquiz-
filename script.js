@@ -14,7 +14,7 @@ async function startGame(level) {
 fetch("question.json?v=" + Date.now())
     let data = await res.json();
 
-    questions = data[level];  // load entire array
+    questions = data;  //Load whole array because only one level exists
     currentQuestion = 0;
     score = 0;
 
