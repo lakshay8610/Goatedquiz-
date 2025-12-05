@@ -1,36 +1,31 @@
 let questions = [];
 let currentQuestion = 0;
 let score = 0;
-let timer;
-let timeLeft = 15;
+let timerInterval;
 
-let correctSound = new Audio("correct.mp3");
-let wrongSound = new Audio("wrong.mp3");
+async function loadQuestions() {
+    const response = await fetch("question.json");
+    questions = await response.json();
+}
 
-// START GAME
-async function startGame() {
-    document.getElementById("level-screen").classList.add("hidden");
-    document.getElementById("quiz-screen").classList.remove("hidden");
+function startQuiz() {
+    document.getElementById("start-screen").style.display = "none";
+    document.getElementById("quiz-screen").style.display = "block";
 
-    // Load JSON (with cache bypass)
-    let res = await fetch("question.json?v=" + Date.now());
-    let data = await res.json();
-
-    questions = data;   // full array of questions
     currentQuestion = 0;
     score = 0;
 
-    loadQuestion();
+    loadNextQuestion();
 }
 
-// LOAD QUESTION
-function loadQuestion() {
+function loadNextQuestion() {
     if (currentQuestion >= questions.length) {
         endQuiz();
         return;
     }
 
     let q = questions[currentQuestion];
+
     document.getElementById("question").innerText = q.question;
 
     let optionsDiv = document.getElementById("options");
@@ -44,51 +39,54 @@ function loadQuestion() {
         optionsDiv.appendChild(btn);
     });
 
+    document.getElementById("feedback").innerText = "";
     startTimer();
 }
 
-// TIMER
+function checkAnswer(selected) {
+    let correct = questions[currentQuestion].answer;
+
+    if (selected === correct) {
+        score++;
+        showFeedback("Correct!", "green");
+    } else {
+        showFeedback("Wrong! Correct answer: " + correct, "red");
+    }
+
+    currentQuestion++;
+
+    setTimeout(() => {
+        loadNextQuestion();
+    }, 1200);
+}
+
+function showFeedback(text, color) {
+    let fb = document.getElementById("feedback");
+    fb.innerText = text;
+    fb.style.color = color;
+}
+
 function startTimer() {
-    clearInterval(timer);
-    timeLeft = 15;
+    let timeLeft = 15;
     document.getElementById("timer").innerText = timeLeft;
 
-    timer = setInterval(() => {
+    clearInterval(timerInterval);
+
+    timerInterval = setInterval(() => {
         timeLeft--;
         document.getElementById("timer").innerText = timeLeft;
 
         if (timeLeft <= 0) {
-            clearInterval(timer);
-            wrongSound.play();
-            currentQuestion++;
-            loadQuestion();
+            clearInterval(timerInterval);
+            checkAnswer("no answer");
         }
     }, 1000);
 }
 
-// CHECK ANSWER
-function checkAnswer(selected) {
-    let correctAns = questions[currentQuestion].answer;
-
-    if (selected === correctAns) {
-        correctSound.play();
-        score++;
-        document.getElementById("score").innerText = score;
-    } else {
-        wrongSound.play();
-    }
-
-    currentQuestion++;
-    loadQuestion();
-}
-
-// END QUIZ
 function endQuiz() {
-    clearInterval(timer);
-
+    clearInterval(timerInterval);
     document.getElementById("quiz-screen").innerHTML = `
-        <h2>Quiz Completed!</h2>
-        <p>Your Score: ${score}/${questions.length}</p>
-        <button onclick="location.reload()">Restart</button>
+        <h1>Quiz Complete!</h1>
+        <h2>Your Score: ${score}/${questions.length}</h2>
     `;
 }
