@@ -11,7 +11,7 @@ async function startGame()
     document.getElementById("level-screen").classList.add("hidden");
     document.getElementById("quiz-screen").classList.remove("hidden");
 
-fetch("questions.json?v=" + Date.now())
+fetch("question.json?v=" + Date.now())
     let data = await res.json();
 
     questions = data;  //Load whole array because only one level exists
