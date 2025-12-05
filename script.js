@@ -11,15 +11,16 @@ function startQuiz() {
     document.getElementById("start-screen").style.display = "none";
     document.getElementById("quiz-screen").style.display = "block";
 
-    currentQuestion = 0;
-    score = 0;
-
-    loadNextQuestion();
+    loadQuestions().then(() => {
+        currentQuestion = 0;
+        score = 0;
+        loadNextQuestion();
+    });
 }
 
 function loadNextQuestion() {
     if (currentQuestion >= questions.length) {
-        endQuiz();
+        finishQuiz();
         return;
     }
 
@@ -27,35 +28,38 @@ function loadNextQuestion() {
 
     document.getElementById("question").innerText = q.question;
 
-    let optionsDiv = document.getElementById("options");
-    optionsDiv.innerHTML = "";
+    let optionsBox = document.getElementById("options");
+    optionsBox.innerHTML = "";
+
+    document.getElementById("feedback").innerText = "";
 
     q.options.forEach(option => {
         let btn = document.createElement("button");
-        btn.className = "option-btn";
         btn.innerText = option;
         btn.onclick = () => checkAnswer(option, btn);
-        optionsDiv.appendChild(btn);
+        optionsBox.appendChild(btn);
     });
-
-    document.getElementById("feedback").innerText = "";
 }
 
-function checkAnswer(selected, buttonElement) {
-    let correct = questions[currentQuestion].answer;
+function checkAnswer(selected, btn) {
+    let correctAnswer = questions[currentQuestion].answer;
 
-    if (selected === correct) {
+    let feedback = document.getElementById("feedback");
+
+    if (selected === correctAnswer) {
         score++;
-        buttonElement.style.background = "green";
-        buttonElement.style.color = "white";
-        showFeedback("✔ Correct!", "green");
+        feedback.innerText = "✔ Correct!";
+        feedback.style.color = "lightgreen";
+        btn.style.background = "green";
     } else {
-        buttonElement.style.background = "red";
-        buttonElement.style.color = "white";
-        showFeedback("✘ Wrong!", "red");
+        feedback.innerText = "✘ Wrong!";
+        feedback.style.color = "red";
+        btn.style.background = "darkred";
     }
 
-    disableAllButtons();
+    document.getElementById("score").innerText = score;
+
+    disableButtons();
 
     setTimeout(() => {
         currentQuestion++;
@@ -63,21 +67,12 @@ function checkAnswer(selected, buttonElement) {
     }, 1200);
 }
 
-function disableAllButtons() {
-    document.querySelectorAll(".option-btn").forEach(btn => {
-        btn.disabled = true;
-    });
+function disableButtons() {
+    document.querySelectorAll("#options button").forEach(b => b.disabled = true);
 }
 
-function showFeedback(text, color) {
-    let fb = document.getElementById("feedback");
-    fb.innerText = text;
-    fb.style.color = color;
-}
-
-function endQuiz() {
-    document.getElementById("quiz-screen").innerHTML = `
-        <h1>Quiz Completed</h1>
-        <h2>Your Score: ${score}/${questions.length}</h2>
-    `;
+function finishQuiz() {
+    document.getElementById("quiz-screen").innerHTML =
+        `<h1>Quiz Complete!</h1>
+         <h2>Your Score: ${score}/${questions.length}</h2>`;
 }
