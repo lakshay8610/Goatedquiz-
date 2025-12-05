@@ -1,11 +1,10 @@
 let questions = [];
 let currentQuestion = 0;
 let score = 0;
-let timerInterval;
 
 async function loadQuestions() {
-    const response = await fetch("question.json");
-    questions = await response.json();
+    const res = await fetch("question.json");
+    questions = await res.json();
 }
 
 function startQuiz() {
@@ -35,29 +34,39 @@ function loadNextQuestion() {
         let btn = document.createElement("button");
         btn.className = "option-btn";
         btn.innerText = option;
-        btn.onclick = () => checkAnswer(option);
+        btn.onclick = () => checkAnswer(option, btn);
         optionsDiv.appendChild(btn);
     });
 
     document.getElementById("feedback").innerText = "";
-    startTimer();
 }
 
-function checkAnswer(selected) {
+function checkAnswer(selected, buttonElement) {
     let correct = questions[currentQuestion].answer;
 
     if (selected === correct) {
         score++;
-        showFeedback("Correct!", "green");
+        buttonElement.style.background = "green";
+        buttonElement.style.color = "white";
+        showFeedback("✔ Correct!", "green");
     } else {
-        showFeedback("Wrong! Correct answer: " + correct, "red");
+        buttonElement.style.background = "red";
+        buttonElement.style.color = "white";
+        showFeedback("✘ Wrong!", "red");
     }
 
-    currentQuestion++;
+    disableAllButtons();
 
     setTimeout(() => {
+        currentQuestion++;
         loadNextQuestion();
     }, 1200);
+}
+
+function disableAllButtons() {
+    document.querySelectorAll(".option-btn").forEach(btn => {
+        btn.disabled = true;
+    });
 }
 
 function showFeedback(text, color) {
@@ -66,27 +75,9 @@ function showFeedback(text, color) {
     fb.style.color = color;
 }
 
-function startTimer() {
-    let timeLeft = 15;
-    document.getElementById("timer").innerText = timeLeft;
-
-    clearInterval(timerInterval);
-
-    timerInterval = setInterval(() => {
-        timeLeft--;
-        document.getElementById("timer").innerText = timeLeft;
-
-        if (timeLeft <= 0) {
-            clearInterval(timerInterval);
-            checkAnswer("no answer");
-        }
-    }, 1000);
-}
-
 function endQuiz() {
-    clearInterval(timerInterval);
     document.getElementById("quiz-screen").innerHTML = `
-        <h1>Quiz Complete!</h1>
+        <h1>Quiz Completed</h1>
         <h2>Your Score: ${score}/${questions.length}</h2>
     `;
 }
