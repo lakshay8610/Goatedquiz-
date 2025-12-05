@@ -7,7 +7,7 @@ let correctSound = new Audio("correct.mp3");
 let wrongSound = new Audio("wrong.mp3");
 
 // Load questions from JSON
-async function startGame(level) {
+async function startGame()
     document.getElementById("level-screen").classList.add("hidden");
     document.getElementById("quiz-screen").classList.remove("hidden");
 
