@@ -1,308 +1,89 @@
 [
-  {
-    "question": "What is the capital of India?",
-    "options": ["Delhi", "Mumbai", "Kolkata", "Chennai"],
-    "answer": "Delhi"
-  },
-  {
-    "question": "Which planet is known as the Red Planet?",
-    "options": ["Earth", "Mars", "Jupiter", "Venus"],
-    "answer": "Mars"
-  },
-  {
-    "question": "Who wrote the national anthem of India?",
-    "options": ["Rabindranath Tagore", "Bankim Chandra", "Sarojini Naidu", "Subhash Bose"],
-    "answer": "Rabindranath Tagore"
-  },
-  {
-    "question": "Which gas do plants absorb?",
-    "options": ["Oxygen", "Carbon dioxide", "Nitrogen", "Hydrogen"],
-    "answer": "Carbon dioxide"
-  },
-  {
-    "question": "Which is the largest ocean?",
-    "options": ["Indian Ocean", "Atlantic Ocean", "Arctic Ocean", "Pacific Ocean"],
-    "answer": "Pacific Ocean"
-  },
-  {
-    "question": "Who invented the light bulb?",
-    "options": ["Thomas Edison", "Nikola Tesla", "Newton", "Einstein"],
-    "answer": "Thomas Edison"
-  },
-  {
-    "question": "Which country is known as the Land of Rising Sun?",
-    "options": ["China", "Japan", "Korea", "Thailand"],
-    "answer": "Japan"
-  },
-  {
-    "question": "What is H2O?",
-    "options": ["Oxygen", "Water", "Hydrogen", "Carbon"],
-    "answer": "Water"
-  },
-  {
-    "question": "Which is the smallest state in India?",
-    "options": ["Goa", "Sikkim", "Delhi", "Punjab"],
-    "answer": "Goa"
-  },
-  {
-    "question": "Which animal is called the King of the Jungle?",
-    "options": ["Tiger", "Lion", "Elephant", "Cheetah"],
-    "answer": "Lion"
-  },
+  { "question": "What is the boiling point of water?", "options": ["90°C", "100°C", "80°C", "120°C"], "answer": "100°C" },
+  { "question": "Who invented the telephone?", "options": ["Newton", "Graham Bell", "Einstein", "Edison"], "answer": "Graham Bell" },
+  { "question": "Which planet is known as the Red Planet?", "options": ["Mars", "Venus", "Jupiter", "Mercury"], "answer": "Mars" },
+  { "question": "What is H2O commonly known as?", "options": ["Hydrogen", "Water", "Oxygen", "Salt"], "answer": "Water" },
+  { "question": "Which gas do plants release during photosynthesis?", "options": ["CO2", "Oxygen", "Nitrogen", "Hydrogen"], "answer": "Oxygen" },
+  { "question": "Which is the largest ocean?", "options": ["Atlantic", "Pacific", "Indian", "Arctic"], "answer": "Pacific" },
+  { "question": "Who wrote the National Anthem of India?", "options": ["Tagore", "Gandhi", "Nehru", "Tilak"], "answer": "Tagore" },
+  { "question": "What is the value of Pi?", "options": ["3.14", "2.17", "1.41", "4.21"], "answer": "3.14" },
+  { "question": "Which country is called the Land of the Rising Sun?", "options": ["China", "Japan", "Korea", "Thailand"], "answer": "Japan" },
+  { "question": "How many continents are there?", "options": ["5", "6", "7", "8"], "answer": "7" },
 
-  {
-    "question": "How many days are there in a leap year?",
-    "options": ["364", "365", "366", "367"],
-    "answer": "366"
-  },
-  {
-    "question": "Which organ pumps blood?",
-    "options": ["Heart", "Lungs", "Brain", "Kidney"],
-    "answer": "Heart"
-  },
-  {
-    "question": "What is the boiling point of water?",
-    "options": ["50°C", "100°C", "150°C", "200°C"],
-    "answer": "100°C"
-  },
-  {
-    "question": "Which continent is the largest?",
-    "options": ["Asia", "Africa", "Europe", "Australia"],
-    "answer": "Asia"
-  },
-  {
-    "question": "What is the national animal of India?",
-    "options": ["Tiger", "Lion", "Elephant", "Leopard"],
-    "answer": "Tiger"
-  },
-  {
-    "question": "Which is the hardest natural substance?",
-    "options": ["Iron", "Gold", "Diamond", "Silver"],
-    "answer": "Diamond"
-  },
-  {
-    "question": "What is the currency of Japan?",
-    "options": ["Yen", "Dollar", "Euro", "Won"],
-    "answer": "Yen"
-  },
-  {
-    "question": "Which river is the longest in India?",
-    "options": ["Ganga", "Yamuna", "Godavari", "Narmada"],
-    "answer": "Ganga"
-  },
-  {
-    "question": "Which is the tallest mountain in the world?",
-    "options": ["K2", "Kangchenjunga", "Everest", "Makalu"],
-    "answer": "Everest"
-  },
-  {
-    "question": "How many players play in a cricket team?",
-    "options": ["10", "11", "12", "9"],
-    "answer": "11"
-  },
+  { "question": "Which is the fastest land animal?", "options": ["Cheetah", "Lion", "Horse", "Tiger"], "answer": "Cheetah" },
+  { "question": "What is 12 × 8?", "options": ["96", "88", "108", "112"], "answer": "96" },
+  { "question": "Which vitamin is known as sunshine vitamin?", "options": ["A", "B", "C", "D"], "answer": "D" },
+  { "question": "Which is the smallest prime number?", "options": ["0", "1", "2", "3"], "answer": "2" },
+  { "question": "Which is the largest desert?", "options": ["Sahara", "Thar", "Gobi", "Kalahari"], "answer": "Sahara" },
+  { "question": "Who discovered gravity?", "options": ["Newton", "Einstein", "Tesla", "Curie"], "answer": "Newton" },
+  { "question": "Which blood group is universal donor?", "options": ["A", "B", "AB", "O-"], "answer": "O-" },
+  { "question": "Which is the longest river?", "options": ["Amazon", "Nile", "Ganga", "Yangtze"], "answer": "Nile" },
+  { "question": "How many planets are in the Solar System?", "options": ["7", "8", "9", "6"], "answer": "8" },
+  { "question": "Which instrument measures temperature?", "options": ["Barometer", "Thermometer", "Hygrometer", "Compass"], "answer": "Thermometer" },
 
-  {
-    "question": "What is the largest mammal?",
-    "options": ["Elephant", "Blue Whale", "Giraffe", "Hippo"],
-    "answer": "Blue Whale"
-  },
-  {
-    "question": "Which country won the FIFA World Cup 2022?",
-    "options": ["France", "Brazil", "Argentina", "Germany"],
-    "answer": "Argentina"
-  },
-  {
-    "question": "Which gas do humans breathe in?",
-    "options": ["CO2", "O2", "N2", "H2"],
-    "answer": "O2"
-  },
-  {
-    "question": "How many colors are in a rainbow?",
-    "options": ["6", "7", "8", "9"],
-    "answer": "7"
-  },
-  {
-    "question": "What is the fastest land animal?",
-    "options": ["Cheetah", "Lion", "Horse", "Tiger"],
-    "answer": "Cheetah"
-  },
-  {
-    "question": "Which festival is known as the festival of lights?",
-    "options": ["Holi", "Diwali", "Eid", "Christmas"],
-    "answer": "Diwali"
-  },
-  {
-    "question": "Which is the national flower of India?",
-    "options": ["Lotus", "Rose", "Lily", "Sunflower"],
-    "answer": "Lotus"
-  },
-  {
-    "question": "What is the chemical symbol of gold?",
-    "options": ["Ag", "Au", "Gd", "Go"],
-    "answer": "Au"
-  },
-  {
-    "question": "Which state is known as the ‘Land of Five Rivers’?",
-    "options": ["Punjab", "Haryana", "UP", "Rajasthan"],
-    "answer": "Punjab"
-  },
-  {
-    "question": "How many bones are in the adult human body?",
-    "options": ["206", "200", "150", "250"],
-    "answer": "206"
-  },
+  { "question": "Who is known as the Father of Computers?", "options": ["Charles Babbage", "Alan Turing", "Bill Gates", "Steve Jobs"], "answer": "Charles Babbage" },
+  { "question": "Which is the biggest planet?", "options": ["Earth", "Mars", "Jupiter", "Saturn"], "answer": "Jupiter" },
+  { "question": "What is the currency of Japan?", "options": ["Yuan", "Yen", "Won", "Dollar"], "answer": "Yen" },
+  { "question": "What is the chemical symbol of Gold?", "options": ["Ag", "Gd", "Au", "Go"], "answer": "Au" },
+  { "question": "Which organ pumps blood?", "options": ["Liver", "Heart", "Kidney", "Brain"], "answer": "Heart" },
+  { "question": "How many degrees in a right angle?", "options": ["45°", "60°", "90°", "180°"], "answer": "90°" },
+  { "question": "Which language is used to create websites?", "options": ["HTML", "MS Word", "Photoshop", "C++"], "answer": "HTML" },
+  { "question": "What does CPU stand for?", "options": ["Central Processing Unit", "Central Power Unit", "Computer Program Unit", "Control Process Unit"], "answer": "Central Processing Unit" },
+  { "question": "Which planet has rings?", "options": ["Earth", "Venus", "Saturn", "Mars"], "answer": "Saturn" },
+  { "question": "Which is the nearest star to Earth?", "options": ["Sirius", "Alpha Centauri", "Sun", "Proxima"], "answer": "Sun" },
 
-  {
-    "question": "Which instrument measures temperature?",
-    "options": ["Barometer", "Thermometer", "Speedometer", "Altimeter"],
-    "answer": "Thermometer"
-  },
-  {
-    "question": "What is the national sport of India?",
-    "options": ["Cricket", "Hockey", "Kabaddi", "Football"],
-    "answer": "Hockey"
-  },
-  {
-    "question": "Who discovered gravity?",
-    "options": ["Newton", "Einstein", "Galileo", "Tesla"],
-    "answer": "Newton"
-  },
-  {
-    "question": "Which city is known as the Pink City?",
-    "options": ["Delhi", "Jaipur", "Agra", "Jodhpur"],
-    "answer": "Jaipur"
-  },
-  {
-    "question": "Which blood group is universal donor?",
-    "options": ["A", "B", "O-", "AB+"],
-    "answer": "O-"
-  },
-  {
-    "question": "Which is the largest desert?",
-    "options": ["Sahara", "Gobi", "Arabian", "Thar"],
-    "answer": "Sahara"
-  },
-  {
-    "question": "Which animal gives us wool?",
-    "options": ["Cow", "Goat", "Sheep", "Camel"],
-    "answer": "Sheep"
-  },
-  {
-    "question": "What is the capital of Australia?",
-    "options": ["Sydney", "Melbourne", "Canberra", "Perth"],
-    "answer": "Canberra"
-  },
-  {
-    "question": "Which metal is liquid at room temperature?",
-    "options": ["Gold", "Mercury", "Iron", "Copper"],
-    "answer": "Mercury"
-  },
-  {
-    "question": "Which is the smallest continent?",
-    "options": ["Europe", "Asia", "Australia", "Antarctica"],
-    "answer": "Australia"
-  },
+  { "question": "How many bones are in the adult human body?", "options": ["206", "205", "207", "201"], "answer": "206" },
+  { "question": "Who invented electricity?", "options": ["Einstein", "Edison", "Benjamin Franklin", "Newton"], "answer": "Benjamin Franklin" },
+  { "question": "Which country won the 2011 Cricket World Cup?", "options": ["India", "Sri Lanka", "Australia", "Pakistan"], "answer": "India" },
+  { "question": "What is the full form of USB?", "options": ["Universal Serial Bus", "United System Board", "User Storage Box", "Universal System Base"], "answer": "Universal Serial Bus" },
+  { "question": "Which metal is liquid at room temperature?", "options": ["Iron", "Mercury", "Copper", "Silver"], "answer": "Mercury" },
+  { "question": "Which animal is known as the Ship of the Desert?", "options": ["Horse", "Camel", "Elephant", "Goat"], "answer": "Camel" },
+  { "question": "What is the square root of 144?", "options": ["10", "12", "14", "16"], "answer": "12" },
+  { "question": "Which country has the Taj Mahal?", "options": ["India", "Pakistan", "Nepal", "Bangladesh"], "answer": "India" },
+  { "question": "Which is the smallest state of India?", "options": ["Goa", "Sikkim", "Tripura", "Manipur"], "answer": "Goa" },
+  { "question": "What is the largest mammal?", "options": ["Elephant", "Blue Whale", "Shark", "Giraffe"], "answer": "Blue Whale" },
 
-  {
-    "question": "Who was the first Prime Minister of India?",
-    "options": ["Nehru", "Gandhi", "Patel", "Rajendra Prasad"],
-    "answer": "Nehru"
-  },
-  {
-    "question": "Which planet is closest to the Sun?",
-    "options": ["Earth", "Mars", "Mercury", "Venus"],
-    "answer": "Mercury"
-  },
-  {
-    "question": "What is the study of stars called?",
-    "options": ["Biology", "Physics", "Astronomy", "Geology"],
-    "answer": "Astronomy"
-  },
-  {
-    "question": "Which vitamin comes from sunlight?",
-    "options": ["Vitamin B", "Vitamin C", "Vitamin D", "Vitamin A"],
-    "answer": "Vitamin D"
-  },
-  {
-    "question": "How many planets are in the solar system?",
-    "options": ["7", "8", "9", "10"],
-    "answer": "8"
-  },
-  {
-    "question": "Which country is the largest by area?",
-    "options": ["USA", "China", "Russia", "Canada"],
-    "answer": "Russia"
-  },
-  {
-    "question": "Which is the longest river in the world?",
-    "options": ["Amazon", "Nile", "Yangtze", "Mississippi"],
-    "answer": "Nile"
-  },
-  {
-    "question": "Who painted the Mona Lisa?",
-    "options": ["Michelangelo", "Picasso", "Leonardo da Vinci", "Rembrandt"],
-    "answer": "Leonardo da Vinci"
-  },
-  {
-    "question": "Which country invented paper?",
-    "options": ["India", "China", "Egypt", "Japan"],
-    "answer": "China"
-  },
-  {
-    "question": "Which fruit is known as the king of fruits?",
-    "options": ["Apple", "Banana", "Mango", "Orange"],
-    "answer": "Mango"
-  },
+  { "question": "What is 25% of 200?", "options": ["25", "50", "75", "100"], "answer": "50" },
+  { "question": "Which gas is used for breathing?", "options": ["CO2", "O2", "H2", "N2"], "answer": "O2" },
+  { "question": "Which is the largest bird?", "options": ["Eagle", "Parrot", "Ostrich", "Peacock"], "answer": "Ostrich" },
+  { "question": "What is the national flower of India?", "options": ["Lotus", "Rose", "Sunflower", "Lily"], "answer": "Lotus" },
+  { "question": "Who is the CEO of Tesla?", "options": ["Jeff Bezos", "Mark Zuckerberg", "Elon Musk", "Bill Gates"], "answer": "Elon Musk" },
+  { "question": "How many minutes in 1 hour?", "options": ["30", "45", "60", "90"], "answer": "60" },
+  { "question": "Which continent is India in?", "options": ["Africa", "Europe", "Asia", "Australia"], "answer": "Asia" },
+  { "question": "Which part of the plant makes food?", "options": ["Root", "Leaf", "Stem", "Flower"], "answer": "Leaf" },
+  { "question": "What do bees make?", "options": ["Milk", "Silk", "Honey", "Oil"], "answer": "Honey" },
+  { "question": "Which organ helps you breathe?", "options": ["Heart", "Lungs", "Stomach", "Kidney"], "answer": "Lungs" },
 
-  {
-    "question": "Which planet has rings?",
-    "options": ["Earth", "Saturn", "Mars", "Venus"],
-    "answer": "Saturn"
-  },
-  {
-    "question": "Which country hosted the 2024 Olympics?",
-    "options": ["Japan", "USA", "France", "China"],
-    "answer": "France"
-  },
-  {
-    "question": "Which organ helps you breathe?",
-    "options": ["Heart", "Liver", "Lungs", "Kidney"],
-    "answer": "Lungs"
-  },
-  {
-    "question": "Which festival is known as the festival of colors?",
-    "options": ["Diwali", "Holi", "Eid", "Baisakhi"],
-    "answer": "Holi"
-  },
-  {
-    "question": "Which country is famous for the Great Wall?",
-    "options": ["Japan", "China", "Korea", "Thailand"],
-    "answer": "China"
-  },
-  {
-    "question": "What is the chemical formula of salt?",
-    "options": ["NaCl", "H2O", "CO2", "O2"],
-    "answer": "NaCl"
-  },
-  {
-    "question": "Which is the national bird of India?",
-    "options": ["Crow", "Sparrow", "Peacock", "Bulbul"],
-    "answer": "Peacock"
-  },
-  {
-    "question": "Who is known as the Father of Computers?",
-    "options": ["Charles Babbage", "Steve Jobs", "Alan Turing", "Bill Gates"],
-    "answer": "Charles Babbage"
-  },
-  {
-    "question": "Which animal cannot jump?",
-    "options": ["Dog", "Cow", "Elephant", "Tiger"],
-    "answer": "Elephant"
-  },
-  {
-    "question": "Which is the largest bird?",
-    "options": ["Eagle", "Hawk", "Ostrich", "Peacock"],
-    "answer": "Ostrich"
-  }
+  { "question": "What is freezing point of water?", "options": ["0°C", "10°C", "20°C", "5°C"], "answer": "0°C" },
+  { "question": "Which country has the Great Wall?", "options": ["Japan", "China", "India", "Korea"], "answer": "China" },
+  { "question": "What is 7 × 9?", "options": ["56", "63", "72", "49"], "answer": "63" },
+  { "question": "Which planet is closest to the Sun?", "options": ["Earth", "Mars", "Venus", "Mercury"], "answer": "Mercury" },
+  { "question": "Which festival is known as festival of lights?", "options": ["Holi", "Diwali", "Eid", "Pongal"], "answer": "Diwali" },
+  { "question": "What is the national animal of India?", "options": ["Lion", "Tiger", "Elephant", "Peacock"], "answer": "Tiger" },
+  { "question": "Which gas do humans exhale?", "options": ["Oxygen", "CO2", "Nitrogen", "Hydrogen"], "answer": "CO2" },
+  { "question": "Who painted the Mona Lisa?", "options": ["Picasso", "Leonardo da Vinci", "Van Gogh", "Renoir"], "answer": "Leonardo da Vinci" },
+  { "question": "Which country invented paper?", "options": ["Japan", "India", "China", "Egypt"], "answer": "China" },
+  { "question": "What is the capital of France?", "options": ["Paris", "Rome", "Berlin", "Madrid"], "answer": "Paris" },
+
+  { "question": "What is the hardest natural substance?", "options": ["Iron", "Diamond", "Gold", "Quartz"], "answer": "Diamond" },
+  { "question": "Which planet is known for storms called Great Red Spot?", "options": ["Earth", "Mars", "Jupiter", "Venus"], "answer": "Jupiter" },
+  { "question": "How many zeros in 1 million?", "options": ["4", "5", "6", "7"], "answer": "6" },
+  { "question": "Which force pulls objects to Earth?", "options": ["Magnetism", "Gravity", "Friction", "Pressure"], "answer": "Gravity" },
+  { "question": "Which animal is the King of the Jungle?", "options": ["Lion", "Tiger", "Leopard", "Wolf"], "answer": "Lion" },
+  { "question": "Who discovered penicillin?", "options": ["Louis Pasteur", "Fleming", "Darwin", "Curie"], "answer": "Fleming" },
+  { "question": "What is the capital of India?", "options": ["Mumbai", "Delhi", "Kolkata", "Chennai"], "answer": "Delhi" },
+  { "question": "Which is the smallest planet?", "options": ["Mars", "Mercury", "Earth", "Neptune"], "answer": "Mercury" },
+  { "question": "What is 50 ÷ 5?", "options": ["5", "10", "15", "20"], "answer": "10" },
+  { "question": "Which shape has 3 sides?", "options": ["Square", "Triangle", "Circle", "Pentagon"], "answer": "Triangle" },
+
+  { "question": "What is the main gas in air?", "options": ["Oxygen", "Nitrogen", "CO2", "Hydrogen"], "answer": "Nitrogen" },
+  { "question": "Who was the first Prime Minister of India?", "options": ["Gandhi", "Nehru", "Tagore", "Patel"], "answer": "Nehru" },
+  { "question": "What is 9²?", "options": ["72", "81", "90", "99"], "answer": "81" },
+  { "question": "What does WWW stand for?", "options": ["World Wide Web", "World War Wing", "Web Wide World", "World Web Wide"], "answer": "World Wide Web" },
+  { "question": "What is the largest island?", "options": ["Greenland", "Madagascar", "Iceland", "Borneo"], "answer": "Greenland" },
+  { "question": "Which planet is blue?", "options": ["Mars", "Neptune", "Saturn", "Earth"], "answer": "Neptune" },
+  { "question": "Which animal can fly?", "options": ["Bat", "Cat", "Dog", "Rabbit"], "answer": "Bat" },
+  { "question": "What is 1000 grams equal to?", "options": ["1 kg", "2 kg", "500 g", "10 kg"], "answer": "1 kg" },
+  { "question": "Which sense organ helps us hear?", "options": ["Eyes", "Nose", "Ears", "Skin"], "answer": "Ears" },
+  { "question": "Where do penguins live?", "options": ["North Pole", "South Pole", "Africa", "India"], "answer": "South Pole" }
 ]
-
